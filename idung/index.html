@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Hadiah Untuk Orang Yang Gapernah Dapet Hadiah AWAKWOAK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- SCREEN 1: LOGIN -->
+    <section id="login-screen" class="screen active">
+      <div class="glass-box">
+        <h1>allowwww</h1>
+        <p>Login dulu yaa jan ko manja</p>
+        <form id="login-form">
+          <input type="text" id="username" placeholder="Username" autocomplete="off" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <p id="login-error" class="error-text hidden">SALAH BODOK COBA KO MASUKIN PASSWORD NYA arifbahik 😜</p>
+          <button type="submit" class="btn">Masuk</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: MINIGAMES -->
+    <section id="games-screen" class="screen hidden">
+      <div class="glass-box games-box">
+        <h2>Halo idung! Nih ku kasih mainan!</h2>
+        <h2>Ko mainin pelan pelan ya</h2>
+
+        <div id="task-1" class="task-container">
+          <p><strong>Tugas 1:</strong> Kumpulin 5 bintang yang jatuh!</p>
+          <p class="counter">Sisa bintang: <span id="star-count">5</span></p>
+          <div id="stars-area"></div>
+        </div>
+
+        <div id="task-2" class="task-container hidden">
+          <p><strong>Tugas 2:</strong> Coba ko tekan tombol ini kalau bisa! 😝</p>
+          <div id="runaway-area">
+            <button id="runaway-btn" class="btn">Pencet Aku!</button>
+          </div>
+        </div>
+
+        <div id="task-complete" class="task-container hidden">
+          <p>yeayyy hebat kamu anak jamal! Kamu berhasil menyelesaikan semuanya!</p>
+          <button id="next-to-gift-btn" class="btn primary-btn">nah ini untuk hadiahnya 🎁</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: GIFT -->
+    <section id="gift-screen" class="screen hidden">
+      <div class="gift-container">
+        <h2 class="wobble">naah ni dia hadiah untuk ko, coba buka 🎁</h2>
+        <div id="the-gift">
+          <!-- SVG Gift Icon -->
+          <svg viewBox="0 0 24 24" width="150" height="150" fill="var(--primary-color)">
+            <path
+              d="M22 6h-3.41l1.71-1.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L17.17 4.59C16.8 4.22 16.3 4 15.75 4h-.54l-1.01-1.01c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L14.5 6H9.5l1.71-1.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L8.09 4.59C7.72 4.22 7.22 4 6.67 4h-.54l-1.01-1.01c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L5.41 6H2c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h20c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1zm-2 4H4v11c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10zm-9 11h-2V12h2v9z"
+            />
+          </svg>
+        </div>
+        <p class="tap-hint">(Ketuk kadonya!)</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: VIDEO -->
+    <section id="video-screen" class="screen hidden">
+      <div class="glass-box video-box">
+        <h2>Tadaaa! 🎉</h2>
+        <div class="video-wrapper">
+          <video id="surprise-video" controls playsinline>
+            <source src="assets/video/vidme.mp4" type="video/mp4" />
+            Video tidak didukung.
+          </video>
+        </div>
+        <p class="surprise-message">AWKAOKWOAKWOKAOKWOAWK! 🥰</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 5: WHATSAPP -->
+    <section id="wa-screen" class="screen hidden">
+      <div class="glass-box">
+        <h2>Pesan dan kesan mu untuk aku yang Bahik ini</h2>
+        <p>Ketik balasan pesanmu di sini ya!</p>
+        <textarea id="wa-message" rows="4" placeholder="Ketik pesan manismu..."></textarea>
+        <button id="send-wa-btn" class="btn primary-btn">Kirim🚀</button>
+      </div>
+    </section>
+
+    <audio id="bg-music" loop>
+      <source src="assets/music/Backstreet_Boys_-_Shape_of_My_Heart_(mp3.pm).mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
